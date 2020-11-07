@@ -1,4 +1,4 @@
-// Let's store this monkey in a variable
+// Let's store this monkey in a variable. The api includes my key, which I had to signup for.
 let api = "https://api.nasa.gov/insight_weather/?api_key=bZTSj2og3ShInfizS2uO0XsucghEfJewjSLlf176&feedtype=json&ver=1.0"
 
 // Here we grab some DOM elements
