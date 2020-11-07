@@ -1,0 +1,267 @@
+body {
+  background-color: #EBECF0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EBECF0;
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+  background-blend-mode: soft-light, normal;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px #A6ABBD;
+          box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px #A6ABBD;
+  border-radius: 40px;
+  margin-top: 1rem;
+  height: 95vh;
+  width: 800px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+header .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: -2rem;
+}
+
+header img {
+  margin-right: 1rem;
+}
+
+header p {
+  margin-top: 1.5rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .main__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2rem;
+}
+
+main .main__top .main__top--select {
+  position: relative;
+  margin-right: 6rem;
+}
+
+main .main__top select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #F0F0F3;
+  -webkit-box-shadow: -1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
+          box-shadow: -1px -1px 3px #FFFFFF, 1.5px 1.5px 3px rgba(174, 174, 192, 0.4);
+  border-radius: 5px;
+  border: none;
+  font-family: 'Rubik', sans-serif;
+  -webkit-appearance: button;
+  appearance: none;
+  outline: none;
+  padding: 6px;
+  width: 120px;
+  font-size: 16px;
+  color: #F89052;
+  padding-left: 15px;
+}
+
+main .main__top .main__top--select::before {
+  content: url(img/dropdown-arrow.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  text-align: center;
+  line-height: 34px;
+  pointer-events: none;
+}
+
+main .main__top .switch__box {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main__top .switch__box span {
+  font-weight: 300;
+  color: #F89052;
+}
+
+main .main__top .switch__box--switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+main .main__top .switch__box--switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+main .main__top .switch__box--slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #EEEEEE;
+  -webkit-box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.7), inset 1px 1px 2px rgba(174, 174, 192, 0.2);
+          box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.7), inset 1px 1px 2px rgba(174, 174, 192, 0.2);
+  border-radius: 12px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+main .main__top .switch__box--slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: #F0F0F3;
+  -webkit-box-shadow: -1px -1px 10px rgba(174, 174, 192, 0.15), 3px 1px 4px rgba(174, 174, 192, 0.25);
+          box-shadow: -1px -1px 10px rgba(174, 174, 192, 0.15), 3px 1px 4px rgba(174, 174, 192, 0.25);
+  border-radius: 12px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+main .main__top input:checked + .switch__box--slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+main .weather__info {
+  text-align: center;
+  background: linear-gradient(317.7deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 105.18%), #EBECF0;
+  background-blend-mode: soft-light, normal;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: inset -5px -5px 10px #FAFBFF, inset 5px 5px 10px #A6ABBD;
+          box-shadow: inset -5px -5px 10px #FAFBFF, inset 5px 5px 10px #A6ABBD;
+  border-radius: 40px;
+  width: 500px;
+}
+
+main .weather__info p {
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+main .weather__info .weather__info--temp {
+  margin-top: 4rem;
+  color: #F89052;
+}
+
+main .weather__info .temperature {
+  font-size: 100px;
+  margin-top: -1rem;
+  color: #444444;
+}
+
+main .weather__info .weather__info--wind {
+  margin-top: -4rem;
+  color: #F89052;
+  margin-bottom: 4rem;
+}
+
+main .weather__info .weather__info--wind p {
+  font-size: 14px;
+}
+
+main .weather__info .weather__info--wind .wind {
+  font-size: 36px;
+}
+
+main .weather__info .wind {
+  font-size: 50px;
+  margin-top: 1rem;
+  color: #444444;
+}
+
+main .weather__info .temperature__measurement {
+  font-size: 30px;
+}
+
+main .weather__info .wind__measurement {
+  font-size: 20px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 300;
+  color: #444444;
+  padding-top: 2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #444444;
+}
+
+footer a:hover {
+  color: #F89052;
+}
+/*# sourceMappingURL=style.css.map */

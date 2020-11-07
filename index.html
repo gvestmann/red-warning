@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadWeather</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="container__box">
+            <header>
+                <div class="header__logo">
+                    <img src="img/mars.svg" alt="">
+                    <h1>RadWeather</h1>
+                </div>
+                <p>How's life on The Red Planet?</p>
+            </header>
+            <main>
+                <div class="main__container">
+                    <div class="main__top">
+                        <div class="main__top--select">
+                            <select id="main__top--select--location">
+                                <option selected="selected" value="689">Sol 689</option>
+                                <option value="688">Sol 688</option>
+                                <option value="685">Sol 685</option>
+                            </select>
+                        </div>
+                        <div class="switch__box">
+                            <span>C°</span>
+                            <label class="switch__box--switch">
+                                <input id="input-check" type="checkbox">
+                                <span class="switch__box--slider"></span>
+                            </label>
+                            <span>F°</span>
+                        </div>
+                    </div>
+                <div class="weather__info">
+                    <div class="weather__info--temp">
+                        <p>Average temperature</p>
+
+                        <p class="temperature">                  </p>
+
+                    <div class="weather__info--wind">
+                        <p>Average wind</p>
+                        <p class="wind"></p>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer__wrapper">
+                    <p>Data provided by <a href="https://mars.nasa.gov/insight/weather/">NASA's API</a>.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
