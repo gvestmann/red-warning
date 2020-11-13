@@ -27,19 +27,19 @@ fetch(api)
     // If the user wants celcius ...
     if(checked != 'on') {
         // The temperature is displayed right from NASA's API. But take not, I round the number with ~~
-        temperature.innerHTML = ~~data[689].AT.av  + '<span class="temperature__measurement"> °c</span>';
+        temperature.innerHTML = ~~data[698].AT.av  + '<span class="temperature__measurement"> °c</span>';
         // ... and here's the wind
-        wind.innerHTML = ~~data[689].HWS.av  + '<span class="wind__measurement"> m/s</span>';
+        wind.innerHTML = ~~data[698].HWS.av  + '<span class="wind__measurement"> m/s</span>';
     // Now, if the user wants farenheit ...
     } else {
         // ... I get the temperature provided by the API and store it in a variable for conversion 
-        let celcius = data[689].AT.av
+        let celcius = data[698].AT.av
         // Here's some math for converting celcius into farenheit
         let farenheit = celcius * (9/5) + 32;
         // And now that farenheit is displayed in the DOM
         temperature.innerHTML = ~~farenheit + '<span class="temperature__measurement"> °f</span>';
         // Plus the wind in M/S
-        wind.innerHTML = ~~data[689].HWS.av  + '<span class="wind__measurement"> m/s</span>';
+        wind.innerHTML = ~~data[698].HWS.av  + '<span class="wind__measurement"> m/s</span>';
     }
 }
 );
