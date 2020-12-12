@@ -32,6 +32,12 @@ body {
   width: 800px;
 }
 
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 95vw;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,7 +201,25 @@ main .weather__info {
   -webkit-box-shadow: inset -5px -5px 10px #FAFBFF, inset 5px 5px 10px #A6ABBD;
           box-shadow: inset -5px -5px 10px #FAFBFF, inset 5px 5px 10px #A6ABBD;
   border-radius: 40px;
-  width: 500px;
+  width: 40vw;
+}
+
+@media screen and (max-width: 1080px) {
+  .weather__info {
+    width: 60vw !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .weather__info {
+    width: 70vw !important;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .weather__info {
+    width: 80vw !important;
+  }
 }
 
 main .weather__info p {
