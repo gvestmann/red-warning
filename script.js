@@ -14,16 +14,24 @@ fetch(api)
 })
 
 .then(data =>{
+    console.log(data)
     let nasaData = data;
     let optionSelect = document.getElementById("main__top--select--location");
+    try {
     for (var i = 0; i < data.sol_keys.length; i++) {
         var option = document.createElement("option");
         option.value = data.sol_keys[i];
         option.text = `Sol ${data.sol_keys[i]}`;
         optionSelect.appendChild(option);
     }
+    } catch { 
+        throw "Sol keys are not found"
+    }
     let value = optionSelect.options[optionSelect.selectedIndex].value;
     let checked = JSON.parse(localStorage.getItem('checked'));
+    
+    try {
+
     if(checked != 'on') {
         temperature.innerHTML = ~~data[value].AT.av  + '<span class="temperature__measurement"> °c</span>';
         wind.innerHTML = ~~data[value].HWS.av  + '<span class="wind__measurement"> m/s</span>';
@@ -32,6 +40,11 @@ fetch(api)
         let farenheit = celcius * (9/5) + 32;
         temperature.innerHTML = ~~farenheit + '<span class="temperature__measurement"> °f</span>';
         wind.innerHTML = ~~data[value].HWS.av  + '<span class="wind__measurement"> m/s</span>';
+    }
+    } catch(error) { 
+        console.log(data)
+        console.log(value)
+        throw error
     }
 
     function checkCheck() {
